@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&family=Staatliches&display=swap');
+
+:root {
+    --color-primario: #111317;
+    --color-primario-light: #1f2125;
+    --color-primario-extra-light: #35373b;
+    --color-secundario: #119822;
+    --color-secundario-oscuro: #04471c;
+    --color-texto-claro: #d1d5db;
+    --blanco: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primario);
+}
+
+/*Header*/
+.header__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+.title__color {
+    color: var(--color-secundario);
+}
+
+.btn {
+    background-color: var(--color-secundario);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: var(--color-secundario-oscuro);
+    cursor: pointer;
+}
+
+.navbar__option {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.navbar__link {
+    text-decoration: none;
+    margin: 1rem;
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+
+.navbar__option .navbar__link {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--blanco);
+    text-decoration: none;
+
+}
+
+.navbar__link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-secundario);
+    transition: 0.3s;
+}
+
+.navbar__link:hover::after {
+    width: 50%;
+}
+
+/*Banner*/
+.section__banner {
+    background-image: url("../img/banner.png");
+    height: calc(100vh - 100px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+.banner__container {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.banner__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    font-weight: bold;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 0.25 var(--color-primario-light);
+}
+
+.banner__description {
+    color: var(--blanco);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/*Galeria*/
+
+.section__gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.gallery__header {
+    color: var(--blanco);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.main__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.gallery__item {
+    position: relative;
+    flex-basis: 33%;
+    padding: 0.7rem;
+    border: 2px solid var(--color-primario-extra-light);
+}
+
+.gallery__container-image {
+    overflow: hidden;
+}
+
+.gallery__image {
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+.gallery__item:hover .gallery__image {
+    transform: scale(1.1);
+}
+
+.gallery__title {
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    color: var(--color-texto-claro);
+}
+
+/*Entrenadores*/
+.section__entrenadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.entrenadores__title {
+    color: var(--color-secundario);
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1rem
+}
+
+.entrenadores__description {
+    color: var(--color-texto-claro);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.entrenadores__container {
+    display: flex;
+    margin: 10vh;
+}
+
+.tarjeta {
+    background-color: var(--color-primario-light);
+    border: 1px solid var(--color-primario-extra-light);
+    padding: 2rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+}
+
+.tarjeta img {
+    max-width: 100%;
+}
+
+.entrenadores__name {
+    color: var(--blanco);
+}
+
+/*Footer*/
+.footer__footer {
+    background-color: var(--color-primario-light);
+    color: var(--blanco);
+    padding: 20px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.infoContacto p,
+.redesSociales a {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.redesSociales a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.footer i {
+    margin-right: 10px;
+}
+
+/*Programas*/
+.program__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.program__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.program__card {
+    padding: 1rem;
+    background-color: var(--color-primario-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.program__card:hover {
+    background-color: var(--color-primario-extra-light);
+    border-color: var(--color-secundario);
+}
+
+.program__card span {
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--blanco);
+    background-color: var(--color-secundario-oscuro);
+    border-radius: 7px;
+}
+
+.program__card h3 {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--blanco);
+}
+
+.program__card p {
+    margin-bottom: 1rem;
+    color: var(--color-texto-claro);
+}
+
+.program__card a {
+    color: var(--blanco);
+    transition: 0.3s;
+}
+
+.program__card a:hover {
+    color: var(--color-secundario);
+}
+
+.clases__container {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.clases__content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.clases__title {
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.clases__content p {
+    margin-bottom: 2rem;
+    color: var(--color-texto-claro);
+    font-size: 1.4rem;
+}
+
+.clases__img {
+    width: 100%;
+}
+
+/*Servicios*/
+.price__header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem;
+    font-size: 2.4rem;
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.price__subheader {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem;
+    font-size: 1.2rem;
+    color: var(--blanco);
+    font-weight: 500;
+}
+
+.price__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem;
+    padding: 3rem;
+}
+
+.price__card {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primario-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.price__card:hover {
+    background-color: var(--color-primario-extra-light);
+    border-color: var(--color-secundario);
+}
+
+.price__card__content {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.price__card h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--blanco);
+}
+
+.price__card h3 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blanco);
+    border-bottom: 2px solid var(--blanco);
+}
+
+.price__card p {
+    margin-bottom: 0.75rem;
+    color: var(--blanco);
+}
+
+.price__card p i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+}
+
+.price__btn {
+    color: var(--color-secundario);
+    background-color: transparent;
+    border: 2px solid var(--color-secundario);
+}
+
+.price__btn:hover {
+    color: var(--blanco);
+}
+
+/*Nosotros*/
+.about__container {
+    display: flex;
+}
+
+.about__content {
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.about__content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--blanco);
+    padding: 1rem;
+}
+
+.about__content p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--color-texto-claro);
+}
+
+.image__content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.about__img {
+    max-width: 850px;
+    margin: 0, auto;
+}
+
+.about__ubicacion {
+    display: flex;
+    justify-content: center;
+}
+
+.ubicacion__title {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/*Contacto*/
+.contenedor__contacto {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.contacto__title {
+    font-size: 2rem;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    color: var(--blanco);
+    justify-content: center;
+}
+
+.formulario {
+    background-color: var(--color-primario-light);
+    margin: 0 auto;
+    width: 60rem;
+    padding: 6rem;
+    border-radius: 2rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+    font-weight: 700;
+    color: var(--blanco);
+}
+
+.campo__field {
+    flex: 1;
+    border: 2px solid var(--color-secundario);
+}
+
+.campo__field--textarea {
+    height: 10rem;
+}
+
+/****************/
+
+/*Responsive*/
+
+@media (max-width: 1023px) {
+
+    /*Header*/
+    .header__header {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    /*Banner*/
+    .banner__title {
+        font-size: 2rem;
+    }
+
+    .banner__description {
+        font-size: 0.8rem;
+    }
+
+    /*Gallery*/
+    .main__gallery {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+
+    /*Entrenadores*/
+    .entrenadores__container {
+        flex-direction: column;
+    }
+
+    /*Footer*/
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*Programas*/
+    .program__title {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .program__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .clases__title {
+        font-size: 1.5rem;
+    }
+
+    .clases__content p {
+        font-size: 1rem;
+    }
+
+    /*Servicios*/
+    .precio__header {
+        font-size: 1.5rem;
+    }
+
+    .price__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}
+
+
+/*Vista Mobile*/
+
+@media (max-width:768px) {
+
+    /*Header*/
+    .navbar__link {
+        font-size: 0.8rem;
+    }
+
+    .gallery__header {
+        font-size: 2rem;
+    }
+
+    .main__gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .entrenadores__title {
+        font-size: 1.5rem;
+    }
+
+    /*Programas*/
+    .program__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /*Servicios*/
+    .price__grid {
+        grid-template-columns: 1fr;
+    }
+}

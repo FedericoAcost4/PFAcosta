@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>FitLife</title>
+</head>
+<body>
+    <!--Inicio de Header-->
+    <header class="header__header">
+        <h1 class="header__title">Fit<span class="title__color">Lab</span></h1>
+
+        <nav class="header__navbar">
+            <ul class="navbar__list">
+                <li class="navbar__option">
+                    <a class="navbar__link" href="../index.html">Home</a>
+                    <a class="navbar__link" href="../pages/programas.html">Programas</a>
+                    <a class="navbar__link" href="../pages/servicios.html">Servicios</a>
+                    <a class="navbar__link" href="../pages/nosotros.html">Nosotros</a>
+                    <a class="navbar__link" href="../pages/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="btn">Join Now</button>
+    </header>
+    <!--Fin de Header-->
+
+    <!--Inicio de Main-->
+    <main class="contenedor__contacto">
+        <h2 class="contacto__title">Contacto</h2>
+        <div class="contenedor__formulario">
+            <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input
+                    class="campo__field"
+                    type="text"
+                    placeholder="Tu Nombre"
+                    id="nombre"
+                >
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail</label>
+                <input
+                    class="campo__field"
+                    type="email"
+                    placeholder="Tu E-mail"
+                    id="email"
+                >
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje</label>
+                <textarea
+                    class="campo__field campo__field--textarea"
+                    id="mensaje"
+                ></textarea>
+            </div>
+
+            <div class="campo">
+                <input class="btn" type="submit" value="Enviar">
+            </div>
+            </form>
+        </div>
+    </main>
+    <!--Fin de Main-->
+
+    <!--Inicio de footer-->
+    <footer class="footer__footer">
+        <div class="footer__container">
+            <div class="infoContacto">
+                <h4>Contacto</h4>
+                <p><i class="ri-map-pin-line"></i>Dirección: Grecia 307</p>
+                <p><i class="ri-phone-line"></i>Telefono: +598 94 95 17</p>
+                <p><i class="ri-mail-line"></i>Email: infoFitlab@gmail.com</p>
+            </div>
+            <div class="redesSociales">
+                <h4>Redes Sociales</h4>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-tiktok-fill"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!--Fin de footer-->
+</body>
+</html>
