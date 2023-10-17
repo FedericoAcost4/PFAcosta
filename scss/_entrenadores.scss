@@ -1,0 +1,44 @@
+/*Entrenadores*/
+
+.section__entrenadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.entrenadores__title {
+  color: var(--color-secundario);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.entrenadores__description {
+  color: var(--color-texto-claro);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.entrenadores__container {
+  display: flex;
+  margin: 10vh;
+}
+
+.tarjeta {
+  background-color: var(--color-primario-light);
+  border: 1px solid var(--color-primario-extra-light);
+  padding: 2rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.entrenadores__name {
+  color: var(--blanco);
+}

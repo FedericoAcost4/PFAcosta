@@ -1,0 +1,51 @@
+/*Nosotros*/
+
+.about__container {
+  display: flex;
+}
+
+.about__content {
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.about__header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blanco);
+  padding: 1rem;
+}
+
+.about__description {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: var(--color-texto-claro);
+}
+
+.image__content {
+  display: flex;
+  justify-content: center;
+}
+
+.about__img {
+  max-width: 750px;
+  margin: 0, auto;
+}
+
+.about__ubicacion {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.ubicacion__title {
+  color: var(--blanco);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+}

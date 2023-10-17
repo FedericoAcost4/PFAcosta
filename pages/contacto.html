@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">    
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>FitLife</title>
+    <title>FitLab</title>
 </head>
+
 <body>
     <!--Inicio de Header-->
     <header class="header__header">
@@ -15,11 +17,11 @@
         <nav class="header__navbar">
             <ul class="navbar__list">
                 <li class="navbar__option">
-                    <a class="navbar__link" href="../index.html">Home</a>
-                    <a class="navbar__link" href="../pages/programas.html">Programas</a>
-                    <a class="navbar__link" href="../pages/servicios.html">Servicios</a>
-                    <a class="navbar__link" href="../pages/nosotros.html">Nosotros</a>
-                    <a class="navbar__link" href="../pages/contacto.html">Contacto</a>
+                    <a class="navbar__link" href="/index.html">Home</a>
+                    <a class="navbar__link" href="./pages/programas.html">Programas</a>
+                    <a class="navbar__link" href="./pages/servicios.html">Servicios</a>
+                    <a class="navbar__link" href="./nosotros.html">Nosotros</a>
+                    <a class="navbar__link" href="contacto.html">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -29,41 +31,26 @@
     <!--Fin de Header-->
 
     <!--Inicio de Main-->
-    <main class="contenedor__contacto">
-        <h2 class="contacto__title">Contacto</h2>
-        <div class="contenedor__formulario">
-            <form class="formulario">
-            <div class="campo">
-                <label class="campo__label" for="nombre">Nombre</label>
-                <input
-                    class="campo__field"
-                    type="text"
-                    placeholder="Tu Nombre"
-                    id="nombre"
-                >
-            </div>
+    <main>
+        <div class="form__container">
+            <form class="form__content">
+                <h2 class="form__header">Contacto</h2>
+                <div class="input__group">
+                    <label class="group__label" for="name">Nombre</label>
+                    <input class="group__field" type="text" name="name" id="name" placeholder="Nombre">
 
-            <div class="campo">
-                <label class="campo__label" for="email">E-mail</label>
-                <input
-                    class="campo__field"
-                    type="email"
-                    placeholder="Tu E-mail"
-                    id="email"
-                >
-            </div>
+                    <label class="group__label" for="phone">Telefono</label>
+                    <input class="group__field" type="tel" name="phone" id="phone" placeholder="Telefono">
 
-            <div class="campo">
-                <label class="campo__label" for="mensaje">Mensaje</label>
-                <textarea
-                    class="campo__field campo__field--textarea"
-                    id="mensaje"
-                ></textarea>
-            </div>
+                    <label class="group__label" for="email">Email</label>
+                    <input class="group__field" type="email" name="email" id="email" placeholder="Email">
 
-            <div class="campo">
-                <input class="btn" type="submit" value="Enviar">
-            </div>
+                    <label class="group__label" for="message">Mensaje</label>
+                    <textarea class="group__field" name="message" id="message" cols="30" rows="5"
+                        placeholder="Mensaje"></textarea>
+
+                    <input class="form__btn" type="submit" value="Enviar">
+                </div>
             </form>
         </div>
     </main>
@@ -88,4 +75,5 @@
     </footer>
     <!--Fin de footer-->
 </body>
+
 </html>

@@ -1,0 +1,95 @@
+/*Servicios*/
+
+.price__header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem;
+  font-size: 2.4rem;
+  color: var(--blanco);
+  font-weight: 700;
+}
+
+.price__subheader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--blanco);
+  font-weight: 500;
+}
+
+.price__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem;
+  padding: 3rem;
+}
+
+.price__card {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primario-light);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--color-primario-extra-light);
+    border-color: var(--color-secundario);
+  }
+}
+
+.price__card__content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.price__card {
+  h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--blanco);
+  }
+
+  h3 {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blanco);
+    border-bottom: 2px solid var(--blanco);
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+    color: var(--blanco);
+
+    i {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--color-secundario);
+    }
+  }
+}
+
+.price__btn {
+  color: var(--blanco);
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-secundario);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-texto-claro);
+  }
+}
