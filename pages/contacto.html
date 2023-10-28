@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bienvenido a FitLab, tu destino definitivo para el fitness. Ofrecemos programas de entrenamiento personalizados, consejos nutricionales y una comunidad de apoyo para ayudarte a alcanzar tus objetivos de salud y bienestar. ¡Únete a nosotros y transforma tu vida hoy!">
+    <meta name="description"
+        content="Bienvenido a FitLab, tu destino definitivo para el fitness. Ofrecemos programas de entrenamiento personalizados, consejos nutricionales y una comunidad de apoyo para ayudarte a alcanzar tus objetivos de salud y bienestar. ¡Únete a nosotros y transforma tu vida hoy!">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>FitLab | Tú lugar de entrenamiento</title>
@@ -13,22 +16,36 @@
 
 <body>
     <!--Inicio de Header-->
-    <header class="header__header">
-        <h1 class="header__title">Fit<span class="title__color">Lab</span></h1>
-
-        <nav class="header__navbar">
-            <ul class="navbar__list">
-                <li class="navbar__option">
-                    <a class="navbar__link" href="../index.html">Home</a>
-                    <a class="navbar__link" href="../pages/programas.html">Programas</a>
-                    <a class="navbar__link" href="../pages/servicios.html">Servicios</a>
-                    <a class="navbar__link" href="../pages/servicios.html">Nosotros</a>
-                    <a class="navbar__link" href="../pages/contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-
-        <button class="btn">Join Now</button>
+    <header class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <h1 class="header__title">Fit<span class="title__color">Lab</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse header__navbar" id="navbarNav">
+                <ul class="navbar-nav navbar__list mx-auto">
+                    <li class="nav-item navbar__option">
+                        <a class="navbar__link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item navbar__option">
+                        <a class="navbar__link" href="../pages/programas.html">Programas</a>
+                    </li>
+                    <li class="nav-item navbar__option">
+                        <a class="navbar__link" href="../pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item navbar__option">
+                        <a class="navbar__link" href="../pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item navbar__option">
+                        <a class="navbar__link" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn">Join Now</button>
+        </div>
     </header>
     <!--Fin de Header-->
 
@@ -76,6 +93,9 @@
         </div>
     </footer>
     <!--Fin de footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

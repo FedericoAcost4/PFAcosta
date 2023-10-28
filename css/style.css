@@ -22,13 +22,6 @@ body {
 }
 
 /*Header*/
-.header__header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100px;
-}
-
 .header__title {
   font-weight: 700;
   font-size: 2rem;
@@ -55,7 +48,7 @@ body {
 
 .navbar__option {
   list-style-type: none;
-  display: inline-block;
+  padding: 0.7rem;
 }
 
 .navbar__link {
@@ -223,7 +216,10 @@ body {
 }
 
 .entrenadores__name {
+  font-size: 1.2rem;
   color: var(--blanco);
+  margin-top: 1rem;
+  text-align: center;
 }
 
 /*Footer*/
@@ -273,16 +269,16 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--blanco);
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   padding: 2rem;
-  margin: 1rem;
+  margin-top: 4rem;
 }
 
 .program__grid {
-  margin-top: 3rem;
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
 }
 
@@ -325,7 +321,7 @@ body {
 
 .clases__container {
   padding: 2rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .clases__content {
@@ -360,7 +356,7 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 1rem;
+  margin-top: 5rem;
   font-size: 2.4rem;
   color: var(--blanco);
   font-weight: 700;
@@ -370,7 +366,7 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 1rem;
+  margin-top: 2rem;
   padding: 1rem;
   font-size: 1.2rem;
   color: var(--blanco);
@@ -381,8 +377,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin: 2rem;
-  padding: 3rem;
+  margin: 4rem 2rem;
+  padding: 2rem;
 }
 
 .price__card {
@@ -404,13 +400,13 @@ body {
   margin-bottom: 2rem;
 }
 
-.price__card h4 {
+.price__card h3 {
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--blanco);
 }
-.price__card h3 {
+.price__card h4 {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -452,12 +448,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  margin: 1rem;
+  margin-top: 3rem;
 }
 
 .about__header {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-weight: 700;
   color: var(--blanco);
   padding: 1rem;
@@ -465,9 +461,10 @@ body {
 
 .about__description {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: normal;
   color: var(--color-texto-claro);
+  padding: 2rem;
 }
 
 .image__content {
@@ -476,7 +473,7 @@ body {
 }
 
 .about__img {
-  max-width: 750px;
+  max-width: 100%;
   margin: 0, auto;
 }
 
@@ -484,6 +481,7 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .ubicacion__title {
@@ -491,7 +489,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /*Contacto*/
@@ -501,6 +499,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin: 4rem 0;
 }
 
 .form__content {
@@ -562,25 +561,22 @@ body {
 /*Responsive*/
 @media (max-width: 1023px) {
   /*Header*/
-  .header__header {
-    height: auto;
-    flex-direction: column;
-    text-align: center;
-  }
   .btn {
     display: none;
   }
   /*Banner*/
   .banner__title {
-    font-size: 1.6rem;
+    font-size: 3.2rem;
+    text-align: center;
   }
   .banner__description {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   /*Gallery*/
   .main__gallery {
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
+    padding: 1rem;
   }
   /*Entrenadores*/
   .entrenadores__container {
@@ -613,17 +609,27 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+/*Nosotros*/
+.ubicacion__content {
+  width: auto;
+}
+
 /*Vista Mobile*/
 @media (max-width: 768px) {
   /*Header*/
   .navbar__link {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .section__banner {
     max-width: 100%;
   }
+  .banner__description {
+    font-size: 0.9;
+    text-align: justify;
+  }
   .gallery__header {
     font-size: 2rem;
+    text-align: center;
   }
   .main__gallery {
     grid-template-columns: 1fr;
@@ -631,7 +637,17 @@ body {
   .entrenadores__title {
     font-size: 1.5rem;
   }
+  .entrenadores__container {
+    flex-direction: column;
+  }
   /*Programas*/
+  .program__header {
+    text-align: center;
+  }
+  .clases__description {
+    text-align: justify;
+    font-size: 0.9rem;
+  }
   .program__grid,
   .price__grid {
     grid-template-columns: 1fr;
